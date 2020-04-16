@@ -236,8 +236,8 @@ if __name__ == '__main__':
     # img_blocks_nonzero = np.transpose(img_blocks_nonzero, [0, 2, 3, 1]).astype('float32')
     # print(img_blocks_nonzero.shape)
 
-    LR, BATCH_SIZE, EPOCH = 0.0001, 32, 100
-    N_BAND = 5
+    LR, BATCH_SIZE, EPOCH = 0.0005, 16, 100
+    N_BAND = 25
     time_start = time.clock()
     acnn = BS_Net_Conv(LR, BATCH_SIZE, EPOCH, N_BAND)
     acnn.fit(img_block, img=X_img, gt=gt)
