@@ -225,7 +225,7 @@ if __name__ == '__main__':
     # Img, Label = Img[:256, :, :], Label[:256, :]
     n_row, n_column, n_band = img.shape
     X_img = minmax_scale(img.reshape(n_row * n_column, n_band)).reshape((n_row, n_column, n_band))
-    img_block = view_as_windows(X_img, (16, 16, n_band), step=1)
+    img_block = view_as_windows(X_img, (7, 7, n_band), step=1)
     # img_block_2 = view_as_windows(X_img, (32, 32, n_band), step=6)
     img_block = img_block.reshape((-1, img_block.shape[-3], img_block.shape[-2], img_block.shape[-1]))
     # img_block_2 = img_block_2.reshape((-1, img_block_2.shape[-3], img_block_2.shape[-2], img_block_2.shape[-1]))
