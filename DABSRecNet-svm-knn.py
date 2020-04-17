@@ -139,7 +139,7 @@ class BS_Net_Conv:
                 # score = self.eval_band_cv(img, gt, weight, self.n_selected_band, times=2)
                 mean_weight = np.mean(weight_batch, axis=0)
                 band_indx = np.argsort(mean_weight)[::-1][:self.n_selected_band]
-                band_indx = [114, 118, 163, 42, 174, 178, 149, 77, 176, 190, 96, 169, 132, 134, 45, 98, 148, 125, 13, 121, 160, 166, 162, 170, 171]
+                band_indx = [154, 12, 112, 88, 133, 127, 158, 13, 113, 51, 152, 125, 30, 58, 126, 168, 95, 32, 75, 31, 82, 22, 142, 86, 123]
                 print('=============================')
                 print('SELECTED BAND: ', band_indx)
                 print('=============================')
